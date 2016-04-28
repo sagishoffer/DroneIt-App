@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/high_scores"
+        android:id="@+id/textView"
+        android:background="#8b8e97"
+        android:autoText="false"
+        android:gravity="center"
+        android:textColor="#ffffff" />
+</LinearLayout>

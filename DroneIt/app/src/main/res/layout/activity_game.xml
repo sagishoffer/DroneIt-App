@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="landscape"
+    tools:context=".GameActivity"
+    android:layoutDirection="ltr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackround"
+        android:id="@+id/maskLayout"
+        android:visibility="invisible">
+
+        <com.victor.loading.newton.NewtonCradleLoading
+            android:id="@+id/newton_cradle_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="false"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/gameLayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/bottonLinearLayout"
+            android:background="#edffffff"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0m"
+                android:id="@+id/altitudeValueTextView"
+                android:layout_column="1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="left|center"
+                android:layout_marginRight="@dimen/info_bar_layout_margin"
+                android:layout_marginLeft="@dimen/info_bar_layout_margin"
+                android:gravity="center"
+                android:textSize="@dimen/info_bar_text_size"
+                android:drawablePadding="@dimen/info_bar_drawable_padding"
+                android:drawableLeft="@drawable/height"
+                android:drawableStart="@drawable/height"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/speedVrTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="hr: 0m/s"
+                android:layout_column="3"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="left|center"
+                android:layout_marginRight="@dimen/info_bar_layout_margin"
+                android:layout_marginLeft="@dimen/info_bar_layout_margin"
+                android:gravity="center"
+                android:textSize="@dimen/info_bar_text_size"
+                android:drawablePadding="@dimen/info_bar_drawable_padding"
+                android:drawableLeft="@drawable/speed"
+                android:drawableStart="@drawable/speed"
+                android:layout_weight="0.2" />
+
+            <TextView
+                android:id="@+id/speedHrTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="vr: 0m/s"
+                android:layout_column="3"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="left|center"
+                android:layout_marginRight="@dimen/info_bar_layout_margin"
+                android:gravity="center"
+                android:textSize="@dimen/info_bar_text_size"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/distanceValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0m"
+                android:layout_column="5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="left|center"
+                android:layout_marginRight="@dimen/info_bar_layout_margin"
+                android:layout_marginLeft="@dimen/info_bar_layout_margin"
+                android:gravity="center"
+                android:textSize="@dimen/info_bar_text_size"
+                android:drawablePadding="@dimen/info_bar_drawable_padding"
+                android:drawableLeft="@drawable/distance"
+                android:drawableStart="@drawable/distance"
+                android:layout_weight="0.2" />
+
+            <TextView
+                android:id="@+id/waypoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0/0"
+                android:layout_column="5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="@dimen/info_bar_layout_margin"
+                android:layout_marginLeft="@dimen/info_bar_layout_margin"
+                android:gravity="center"
+                android:textSize="@dimen/info_bar_text_size"
+                android:drawablePadding="@dimen/info_bar_drawable_padding"
+                android:drawableLeft="@drawable/flag"
+                android:drawableStart="@drawable/flag"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0s"
+                android:layout_column="5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="left|center"
+                android:layout_marginRight="@dimen/info_bar_layout_margin"
+                android:layout_marginLeft="@dimen/info_bar_layout_margin"
+                android:gravity="center"
+                android:textSize="@dimen/info_bar_text_size"
+                android:drawablePadding="@dimen/info_bar_drawable_padding"
+                android:drawableLeft="@drawable/timer"
+                android:drawableStart="@drawable/timer"
+                android:layout_weight="0.1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnArmTakeOff"
+                android:layout_column="2"
+                android:visibility="invisible"
+                android:onClick="onArmButtonTap"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_weight="0.2" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/mapContainer"
+            android:layout_below="@+id/bottonLinearLayout"></FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/controlersLayout"
+            android:layout_below="@+id/bottonLinearLayout"
+            android:layout_alignParentEnd="true">
+
+            <RelativeLayout
+                android:id="@+id/layout_joystickLeft"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/image_button_bg"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:gravity="fill_horizontal|center|center_horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_joystickRight"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/image_button_bg"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="fill_horizontal|center|center_horizontal"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="16dp" />
+
+        </RelativeLayout>
+
+        <com.romainpiel.shimmer.ShimmerTextView
+            android:id="@+id/status_tv"
+            android:text="@string/start_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackround"
+            android:textSize="70sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

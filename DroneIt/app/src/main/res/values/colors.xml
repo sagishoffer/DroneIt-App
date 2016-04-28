@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorBlueActionBar">#3F51B5</color>
+    <color name="colorBluePrimary">#0985ff</color>
+    <color name="colorBluePrimaryDark">#111</color>
+
+    <!--<color name="colorBluePrimary">#3848a1</color>-->
+    <!--<color name="colorBluePrimaryDark">#29368b</color>-->
+
+    <color name="colorGrayPrimary">#5f6f76</color>
+    <color name="colorGrayPrimaryDark">#565656</color>
+
+    <color name="colorTitle">#313179</color>
+    <!--<color name="colorTitle">#ffffff</color>-->
+    <color name="colorBackround">#56a5ed</color>
+    <color name="colorBackround2">#3c85e5</color>
+    <color name="colorBackround3">#8b8e97</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="dialog_backround">#303655</color>
+
+</resources>

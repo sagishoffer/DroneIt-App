@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sagi.mines.MapFragment"
+    android:layoutDirection="ltr"
+    android:screenOrientation="landscape">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:id="@+id/arrow"
+        android:layout_gravity="center_horizontal|top"
+        android:src="@drawable/arrow"
+        android:layout_marginTop="20dp" />
+</FrameLayout>
